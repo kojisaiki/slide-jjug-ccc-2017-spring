@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section
+					data-markdown
+					data-separator="---"  
+					data-separator-vertical="==="  
+        		>
+
+## JJUG CCC 2017 Spring
+# Report
+
+---
+
+なにそれ
+
+[JJUG CCC 2017 SPRING](http://www.java-users.jp/ccc2017spring/)
+
+---
+
+セクションはたくさんありましたが
+
+SI事業にあたって早急に知っておきたい情報を
+
+まとめます
+
+---
+
+まとめすぎてこんなになりました
+
+- 非機能要件グレード
+
+- マイクロサービスアーキテクチャ
+
+---
+
+# 非機能要件グレード
+
+===
+
+IPA（情報処理推進機構）が提供
+
+[エンタプライズ系事業/非機能要求グレード](http://www.ipa.go.jp/sec/softwareengineering/std/ent03-b.html)
+
+===
+
+> 「非機能要求グレード」は、「非機能要求」についてのユーザと開発者との認識の行き違いや、互いの意図とは異なる理解の状態を防止することを目的とし、重要な項目から段階的に詳細化しながら非機能要求の確認を行う手法です。
+
+いわば非機能要件の国的ガイドライン
+
+なぜだれも教えてくれなかったのか・・・
+
+===
+
+## ポイント１：システムの内容に応じてガイドラインを定義している
+
+===
+
+## ポイント２：要件の内容が網羅的
+
+===
+
+ちなみに・・・
+
+===
+
+公開：2010年4月
+
+最終更新日：2014年2月12日
+
+これをどう取るかは、あなた次第・・・
+
+---
+
+# マイクロサービスアーキテクチャ
+
+===
+
+マイクロサービスアーキテクチャ(MSA)とは
+
+> モノリシック（一枚岩）なアーキテクチャを、ビジネス機能に沿って複数の小さい「マイクロサービス」に分割し、それらを連携させるアーキテクチャにすることで、迅速なデプロイ、優れた回復性やスケーラビリティといった利点を実現しようとするものです。
+> [O'Reilly Japan - マイクロサービスアーキテクチャ](https://www.oreilly.co.jp/books/9784873117607/)
+
+===
+
+なぜMSA?
+
+===
+
+みんなMSA！
+
+- SpringBoot (SpringFrameworkの新しいスタートパッケージ)
+- Springを活用するSIパッケージ
+  - NTT Data TERASOLUNA (2017/4 SpringBoot活用にリニューアル)
+  
+- MicroProfile
+  - IBM WebSphere Liberty
+  - Wildfly Swarm (JBOSS)
+  - Payara MicroProfile (Glassfish派生)
+
+===
+
+そして
+
+===
+
+## Java EE もMSA！
+
+- Java EE 9 でMSAのゴール設定済み
+- Java EE 8 はそのうち優先度の高い仕様を実装
+
+===
+
+MSAどんなの？
+
+===
+
+もう一度・・・
+
+マイクロサービスアーキテクチャ(MSA)とは
+
+> モノリシック（一枚岩）なアーキテクチャを、ビジネス機能に沿って複数の小さい「マイクロサービス」に分割し、それらを連携させるアーキテクチャにすることで、迅速なデプロイ、優れた回復性やスケーラビリティといった利点を実現しようとするものです。
+> [O'Reilly Japan - マイクロサービスアーキテクチャ](https://www.oreilly.co.jp/books/9784873117607/)
+
+===
+
+# メリット１：作業単位が小さくなる
+
+今回の運用では、この部署は旧システムと新システムを併用して業務を・・・なんていう可能性を減らせる
+
+===
+
+# メリット２：最適な技術選択ができる
+
+よく機能拡張する、多数の人がメンテナンスするサービスはJava/C#
+
+技術者が確保できて、速度を重視するサービスはPerl
+
+など・・・
+
+===
+
+マイクロサービスアーキテクチャ
+
+沼なので
+
+名前だけでも覚えて帰ってください
+
+---
+
+もう一度言います
+
+---
+
+名前だけでも覚えて帰ってください
+
+- 非機能要件グレード
+
+- マイクロサービスアーキテクチャ
+
+---
+
+おわり
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
